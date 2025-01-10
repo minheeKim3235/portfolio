@@ -107,7 +107,7 @@
                     bottom: 0;
                     width: 100%;
                     height: 100%;
-                    background: url("@/assets/images/office.webp") no-repeat 50% 80%;
+                    background: url("/images/office.webp") no-repeat 50% 80%;
                     background-size: cover;
                     opacity: .1;
                     z-index: 2;
