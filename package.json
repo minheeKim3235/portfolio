@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "homepage": "https://minheeKim3235.github.io/portfolio/",
+    "deploy": "nuxt generate && gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@vesp/nuxt-fontawesome": "^1.1.0",

@@ -4,10 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false, 
   nitro : {
-  preset : 'github-pages' 
+    preset : 'github-pages'
   },
-  app : {
-  baseURL : '/portfolio/' 
+  app: {
+    baseURL: '/portfolio/', // baseURL: '/<repository>/'
+    buildAssetsDir: 'assets',
   },
   vite: {
     css: {
