@@ -1,0 +1,55 @@
+@use './header' as *;
+@use './media' as *;
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;500&family=Nanum+Gothic:wght@400;800&family=Sofia+Sans+Condensed:wght@600&family=Oswald:wght@400;500&display=swap');
+
+:root {
+  --color-light: #f9f7f7;
+  --color-dark: #112d4e;
+  --color-mid: #3f72af;
+  --font-tit: 'Kodchasan', sans-serif;
+  --font-desc: 'Nanum Gothic', sans-serif;
+  --logo-height: 6vmax;
+  --swiper-centered-offset-before: 20vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, textarea {
+  font-family: var(--font-desc);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+ol, ul, li {
+  list-style: none;
+}
+
+a, a:link, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+.home_wrap {
+  width: 100%;
+  height: 100vh;
+  // scroll-snap-type: y mandatory;
+  // overflow: auto;
+}
+section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  // scroll-snap-align: start;
+  h2 {
+    margin-top: 100px;
+    text-align: center;
+    font: 200 7vmax/1 var(--font-tit);
+    letter-spacing: -5px;
+  }
+}

@@ -1,0 +1,409 @@
+.class-mobile {
+    nav ul {
+        display: grid !important;
+        grid-template-columns: 4fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        gap: 3vw !important;
+        li {
+            max-width: 100% !important;
+            &:not(.logo) {
+                margin: 0 !important;
+                font-size: 3.8vmin !important;
+            }  
+            &.logo {
+                grid-column: 1/5 !important;
+                margin-bottom: 20px !important;
+                width: 100% !important;
+                order: 1 !important;
+            }
+            &:nth-of-type(1) a {
+                margin: 0 auto !important;
+            }
+            &:nth-of-type(2) {
+                order: 2 !important;
+            }
+            &:nth-of-type(3) {
+                order: 3 !important;
+            }
+            &:nth-of-type(4) {
+                order: 4 !important;
+            }
+        
+            &:nth-of-type(5) {
+                order: 5 !important;
+            }
+        }
+    }
+    section {
+        padding-top: 17.5vh !important;
+        h2 {
+            font-size: 10vw !important;
+        }
+    } 
+    #intro {
+        padding-top: 0 !important;
+        .greeting {
+            font-size: 14px !important;
+        }
+    }   
+    #profile {
+        display: block !important;
+        padding-left: 8vw !important;
+        padding-right: 8vw !important;
+        .introduce {
+            margin-bottom: 0px !important;
+        }
+        figure {
+            right: 0 !important;
+            top: calc(50% - 200px) !important;
+            position: absolute !important;
+            height: 100vmin !important;
+            span {
+                min-width:230px !important;
+                border-radius: 250px !important;
+            }
+        }
+        .wrapper {
+            flex-direction: column !important;
+            margin-top: 30px !important;
+            
+            article {
+                width: 100% !important;
+            }
+        }
+    }
+    #skills {
+        display:flex !important;
+        flex-flow: column wrap !important;
+        gap: 4vh !important;
+        ul {
+            margin: 0 auto !important;
+            width: 46vw !important;
+            height: auto !important;
+            gap: 5vw !important;
+            li {
+                padding: 0  !important;
+                width: 12vw !important;
+                height: auto !important;
+            }
+            &:before {
+                display:none !important;
+            }
+        }
+        .text_area {
+            margin: 0 !important;
+            padding: 0 20px !important;
+            height: auto !important;
+            border: none !important;
+            font-size: 3.5vmin !important;
+        }
+    }
+    #works {
+        .work_lists {
+            flex-flow:column !important;
+            width: 100% !important;
+            li {
+                padding-left: 7vw !important;
+                margin: 5px 0 !important;
+                width: 100% !important;
+                .text_wrap {
+                    position: relative;
+                    display: flex !important;
+                    flex-flow: row nowrap !important;
+                    align-items: center !important;
+                    height: 50px !important;
+                    gap: 20px !important;
+                    p {
+                        flex-shrink: 0 !important;
+                        padding: initial !important;
+                        margin: initial !important;
+                        position: relative;
+                        z-index: 2 !important;
+                        &:after {
+                            display: none !important;
+                        }
+                        &.desc {
+                            display: none !important;
+                        }
+                    }
+                    figure {
+                        flex-shrink: 0 !important;
+                        width: 100% !important;
+                        height: 100% !important;
+                        z-index: 1 !important;
+                        border-radius: 25px !important;
+                        overflow: hidden !important;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: -5.25vw;
+                        top: 50%;
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        background: var(--color-dark);
+                        border-radius: 50%;
+                    }
+                }
+                &:hover {
+                    figure {
+                        transform: translate(-10px, 0px) !important;
+                    }
+                }
+            }
+            &:before {
+                left: 10vw !important;
+                width: 1px !important;
+                height: 100% !important;
+                border: none !important;
+                background: var(--color-dark);
+                opacity: 0.2 !important;
+            }
+        }
+    }
+    #contact form {
+        width: 90vw !important;
+        min-width: 200px !important;
+        label {
+            height: 36px !important;
+            + input {
+                height: 36px !important;
+            }
+        }
+    }
+}
+.class-tablet {
+    nav {
+        h1 a {
+            min-width: 40px !important;
+        }
+        ul {
+            width: 95vw !important;
+            li {
+                font-size: .875rem !important;
+            }
+        }
+    }
+    section h2 {
+        letter-spacing: -2px !important;
+    }
+    #intro {
+        .greeting {
+            font-size: 1rem !important;
+        }
+        a.send-mail {
+            font-size: .825rem !important;
+        }
+    } 
+    #about {
+        padding-bottom: 0 !important;
+        display: block !important;
+        figure {
+            position: absolute !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            margin: 0 10% !important;
+            order: 3 !important;
+            span {
+                right: -100px !important;
+                top: auto !important;
+                bottom: 100px !important;
+                width: 35vw !important;
+                min-width: 220px !important;
+                transform: rotate(-45deg) !important;
+                img {
+                    transform: rotate(45deg) translate(20%, 5%) !important;
+                }
+            }
+        }
+        .introduce {
+            padding: 0 10% !important;
+            order: 1
+        }
+        .wrapper {
+            padding: 0 10% !important;
+            order: 2 !important;
+            article {
+                width: 100% !important;
+                &:nth-of-type(2n) {
+                    width: 100% !important;
+                }
+            }
+        }
+        h3 {
+            margin-bottom: 15px !important;
+        }
+    }
+    #skills {
+        display:flex !important;
+        flex-flow: column wrap !important;
+        gap: 4vh !important;
+        ul {
+            margin: 5vh auto !important;
+            width: 80vw !important;
+            height: auto !important;
+            gap: 5vw !important;
+            li {
+                padding: 0  !important;
+                width: 10vw !important;
+                height: auto !important;
+            }
+            &:before {
+                display:none !important;
+            }
+        }
+        .text_area {
+            margin: 0 !important;
+            padding: 0 20px !important;
+            height: auto !important;
+            border: none !important;
+            font-size: 2.5vmin !important;
+        }
+    }
+    #works {
+        .work_lists {
+            li {
+                width: 25vw !important;
+            }
+        }
+        .works_detail {
+            padding-top: 60px !important;
+            overflow: auto !important;
+            min-height: 100vh !important;
+            .pagination {
+                margin: 0 auto 60px !important;
+            }
+            .works_title,
+            .works_desc,
+            .works_tags {
+                max-width: 100% !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .works_title {
+                margin-bottom: 30px !important;
+            }
+            .works_tags {
+                margin: 40px 0 0 0 !important;
+            }
+            figure {
+                overflow: hidden !important;
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                margin: 80px auto !important;
+                transform: translate(0, 0) !important;
+                &.tab {
+                    transform: translateX(-5%) !important;
+                }
+            }
+        }
+    }
+    #contact {
+        input,
+        label,
+        button {
+            height: 40px !important;
+            line-height: 40px !important;
+        }
+    } 
+}
+.class-desktop {
+    nav {
+        h1 a {
+            width: 6vw !important;
+        }
+
+        ul li {
+            font-size: 1.85vw !important;
+        }
+    }
+    #intro {
+        .greeting {
+            font-size: 2.125vw !important;
+        }
+
+        a.send-mail {
+            bottom: 18% !important;
+            font-size: 1rem !important;
+        }
+    }
+    section h2 {
+        font-size: 10vw !important;
+    }
+    #about {
+        grid-template-columns: 34vw 1fr !important;
+
+        figure span {
+            right: 5vw !important;
+            min-width: 300px !important;
+        }
+
+        .wrapper {
+            margin-top: 0 !important;
+
+            article {
+                &:nth-of-type(odd) {
+                    width: 40% !important;
+                }
+
+                &:nth-of-type(even) {
+                    width: 60% !important;
+                }
+
+                h3 {
+                    margin-bottom: 15px !important;
+                }
+            }
+        }
+    }
+    #skills {
+        ul {
+        flex-wrap:nowrap !important;
+        gap: 3.5vw !important;
+            li {
+                height: 60px !important;
+            }
+        }
+    }
+    #works .works_detail .pagination h3 {
+        display: inline-block !important;
+        font-size: 1.825rem !important;
+    }
+}
+  
+
+.class-large-desktop {
+    #works .works_detail figure.pc {
+        left: 47vw !important;
+    }
+
+    #contact h2 {
+        font-size: 6.5vw !important;
+        letter-spacing: -1px !important;
+    }
+}
+body:has(.class-mobile) {
+    .works_detail {
+        display: flex !important;
+        flex-flow: column wrap !important;
+        text-align: center !important;
+        gap: 5vw;
+        .pagination {
+            margin: 0 auto 10vw!important;
+        }
+        p {
+            margin: initial !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        figure {
+            margin: 0 auto !important;
+            position: relative !important;
+            left: initial !important;
+            top: initial !important;
+            transform: initial !important;
+        }
+    }
+}
