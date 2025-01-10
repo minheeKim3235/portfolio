@@ -2,7 +2,7 @@
     <section id="profile" class="bg-light">
         <h2>Profile</h2>
         <figure>
-            <span><img src="@/assets/images/profile.svg" alt="프로필 일러스트"></span>
+            <span><img src="/images/profile.svg" alt="프로필 일러스트"></span>
         </figure>
         <p class="introduce">
             안녕하세요, <strong>{{ totalCarrior }}차</strong> 퍼블리셔 김민희입니다.<br />

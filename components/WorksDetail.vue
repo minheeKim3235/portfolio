@@ -18,8 +18,8 @@
             <figure :class="`${item.type}`">
                 <span class="frame"></span>
                 <span class="img_wrap">
-                    <img :src="`_nuxt/assets/images/works/${item.image[0]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
-                    <img :src="`_nuxt/assets/images/works/${item.image}`" alt="" v-else>
+                    <img :src="`/images/works/${item.image[0]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
+                    <img :src="`/images/works/${item.image}`" alt="" v-else>
                 </span>
             </figure>
             <div class="btn_close" :style="btnStyle" v-show="isBtnVisible" @click="closeDetail"><font-awesome :icon="['fas', 'xmark']" /></div>
@@ -298,7 +298,7 @@ onMounted(() => {
 
             .frame {
                 aspect-ratio: 1.275;
-                background-image: url("@/assets/images/frame_pc.png");
+                background-image: url("/images/frame_pc.png");
             }
 
             .img_wrap {
@@ -317,7 +317,7 @@ onMounted(() => {
 
             .frame {
                 aspect-ratio: 1.6;
-                background-image: url("@/assets/images/frame_tab.png");
+                background-image: url("/images/frame_tab.png");
             }
 
             .img_wrap {
@@ -335,7 +335,7 @@ onMounted(() => {
 
             .frame {
                 aspect-ratio: .5;
-                background-image: url("@/assets/images/frame_mobile.png");
+                background-image: url("/images/frame_mobile.png");
             }
 
             .img_wrap {

@@ -13,10 +13,10 @@
                     </p>
                     <figure :style="`background-color: #${makeRandomColor[i]};`" @click="detailView(i)">
                         <template v-if="Array.isArray(item.image)">
-                            <img :src="`_nuxt/assets/images/works/${item.image[0]}`" alt="" class="image haveGif" />
+                            <img :src="`/images/works/${item.image[0]}`" alt="" class="image haveGif" />
                             <!-- <img :src="getImageUrl(item.image[0])" alt="" class="image haveGif" /> -->
                         </template>
-                        <img :src="`_nuxt/assets/images/works/${item.image}`" alt="" class="image" v-else />
+                        <img :src="`/images/works/${item.image}`" alt="" class="image" v-else />
                         <!-- <img :src="getImageUrl(item.image)" alt="" class="image" v-else /> -->
                     </figure>
                 </div>
