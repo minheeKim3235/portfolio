@@ -3,7 +3,7 @@
         <h2>SKILLS</h2>
         <ul @mouseleave="changeSkill('default')">
             <li v-for="item in data.skills" :key="item.name" @mouseover="changeSkill(item)" :class="`icon_${item.icon}`">
-                <span><img :src="`/images/icon_${item.icon}.svg`" :alt="item.name" class="icon"></span>
+                <span><img :src="`./images/icon_${item.icon}.svg`" :alt="item.name" class="icon"></span>
             </li>
         </ul>
         <!-- ajax 설명 불러오기 -->

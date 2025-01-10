@@ -18,8 +18,8 @@
             <figure :class="`${item.type}`">
                 <span class="frame"></span>
                 <span class="img_wrap">
-                    <img :src="`/images/works/${item.image[0]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
-                    <img :src="`/images/works/${item.image}`" alt="" v-else>
+                    <img :src="`./images/works/${item.image[0]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
+                    <img :src="`./images/works/${item.image}`" alt="" v-else>
                 </span>
             </figure>
             <div class="btn_close" :style="btnStyle" v-show="isBtnVisible" @click="closeDetail"><font-awesome :icon="['fas', 'xmark']" /></div>
