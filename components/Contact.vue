@@ -148,12 +148,13 @@ function getFormData(form) {
 
 <style lang="scss" scoped>
 #contact {
+    --secBg: #596c84;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #596c84;
+    background: var(--secBg);
     color: #fff;
     h2 {
         margin-bottom: 30px;

@@ -6,7 +6,7 @@
         </figure>
         <p class="introduce">
             안녕하세요, <strong>{{ totalCarrior }}차</strong> 퍼블리셔 김민희입니다.<br />
-            만족스러운 사용자경험을 위한 기초가 탄탄하고 완성도 높은 화면 구현을 위해 노력하고 있습니다.
+            만족스러운 사용자경험을 위한 완성도 높은 화면 구현을 위해 노력하고 있습니다.
         </p>
         <div class="wrapper">
             <article>
@@ -57,6 +57,7 @@ const totalCarrior = computed(() => {
 
 <style lang="scss" scoped>
 #profile {
+    --secBg: #fff;
     padding-top:10vh;
     display: grid;
     grid-template-columns: 38.9vw 1fr;
@@ -64,7 +65,7 @@ const totalCarrior = computed(() => {
     align-items: start;
     min-height: 100vh;
     color: var(--color-dark);
-    background: #fff;
+    background-color: var(--secBg);
     
     h2 {
         display: none;
@@ -96,7 +97,7 @@ const totalCarrior = computed(() => {
         }
     }
     .introduce {
-        margin: 80px 0 7.4vh;
+        margin: 120px 0 10px;
         font-size: 0.875rem;
         line-height: 1.5rem;
     }

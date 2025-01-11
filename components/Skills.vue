@@ -54,7 +54,8 @@ const changeSkill = (val) => {
 
 <style lang="scss" scoped>
 #skills {
-    background: #1d3045;
+    --secBg: #1d3045;
+    background: var(--secBg);
     min-height: 100vh;
     padding-top: 100px;
     h2 {

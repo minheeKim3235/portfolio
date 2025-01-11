@@ -3,7 +3,7 @@
         <!-- <div class="guide"><span>좌우로 스와이프 하세요</span></div> -->
         <h2>WORKS</h2>
         <ul class="work_lists" ref="listWrap">
-            <li v-for="(item, i) in data.works" :key="item.title">
+            <li v-for="(item, i) in data.works" :key="item.title" @click="detailView(i)">
                 <div class="text_wrap">
                     <p class="year">{{ item.year }}</p>
                     <p class="title" v-html="item.title"></p>
@@ -11,7 +11,7 @@
                     <p class="tags" v-for="(tag, i) in item.tags" :key="`tag-${i}`">
                         <span>{{ tag }}</span>
                     </p>
-                    <figure :style="`background-color: #${makeRandomColor[i]};`" @click="detailView(i)">
+                    <figure :style="`background-color: #${makeRandomColor[i]};`">
                         <template v-if="Array.isArray(item.image)">
                             <img :src="`./images/works/${item.image[0]}`" alt="" class="image haveGif" />
                             <!-- <img :src="getImageUrl(item.image[0])" alt="" class="image haveGif" /> -->
@@ -128,9 +128,10 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 #works {
+    --secBg: var(--color-light);
     padding: 100px 0 0;
     min-height: 100vh;
-    background-color: var(--color-light);
+    background: var(--secBg);
     color: var(--color-dark);
     box-sizing: border-box;
     h2 {

@@ -21,7 +21,8 @@
 
 <style lang="scss" scoped>
 #intro {
-    background-color: var(--color-light);
+    --secBg: var(--color-light);
+    background-color: var(--secBg);
     
     .intro_wrap {
         margin-top: 10vh;

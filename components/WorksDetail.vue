@@ -18,8 +18,8 @@
             <figure :class="`${item.type}`">
                 <span class="frame"></span>
                 <span class="img_wrap">
-                    <img :src="`./images/works/${item.image[0]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
-                    <img :src="`./images/works/${item.image}`" alt="" v-else>
+                    <img :src="`./images/works/${item.image[1]}`" alt="" v-if="Array.isArray(item.image) && gifData === null">
+                    <img :src="`./images/works/${item.image}`" alt="" class="align-top" v-else>
                 </span>
             </figure>
             <div class="btn_close" :style="btnStyle" v-show="isBtnVisible" @click="closeDetail"><font-awesome :icon="['fas', 'xmark']" /></div>
@@ -235,12 +235,12 @@ onMounted(() => {
 
     .works_title {
         margin-bottom: 50px;
-        font: 800 1.125rem/1 var(--font-tit);
+        font: 800 1.825rem / 1 var(--font-tit);
     }
 
     .works_desc {
         max-width: 30vw;
-        font-size: .875rem;
+        font-size: 1.0125rem;
         line-height: 1.5rem;
     }
 
@@ -283,14 +283,19 @@ onMounted(() => {
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            height: var(--imgWH);
             z-index: 2;
 
             img {
                 max-width: 100%;
             }
+            &:has(.align-top) {
+                align-items: start;
+            }
         }
 
         &.pc {
+            --imgWH: 66.2%;
             left: 43vw;
             top: 50%;
             width: 60vw;
@@ -305,11 +310,11 @@ onMounted(() => {
                 left: 4%;
                 top: 5.6%;
                 width: 92.2%;
-                height: 66.2%;
             }
         }
 
         &.tab {
+            --imgWH: 91%;
             left: 45.2vw;
             top: 50%;
             width: 57vw;
@@ -324,11 +329,11 @@ onMounted(() => {
                 left: 21.3%;
                 top: 4.5%;
                 width: 76.2%;
-                height: 91%;
             }
         }
 
         &.mobile {
+            --imgWH: 93.35%;
             left: 52vw;
             top: 14vh;
             width: 33.8vw;
@@ -342,7 +347,6 @@ onMounted(() => {
                 left: 6.5%;
                 top: 3.3%;
                 width: 86.1%;
-                height: 93.35%;
             }
         }
     }
