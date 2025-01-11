@@ -23,7 +23,7 @@ import data from '@/assets/js/data.json'
 const textArea = ref(null);
 const skill = ref({
     title: '제가 무엇을 할 수 있는지 궁금하신가요?',
-    desc: '웹 화면 구현을 위해 보유하고 있는 기술들을 둘러보세요.<br />새로운 기술들이 계속 업데이트 되고 있습니다.'
+    desc: '웹 화면 구현을 위해 제가 보유하고 있는 기술들을 둘러보세요.<br />새로운 기술들이 계속 업데이트 되고 있습니다.🤗'
 })
 
 const changeSkill = (val) => {
@@ -33,7 +33,7 @@ const changeSkill = (val) => {
         
         if (val === 'default') {
             skill.value.title = '제가 무엇을 할 수 있는지 궁금하신가요?'
-            skill.value.desc = '웹 화면 구현을 위해 보유하고 있는 기술들을 둘러보세요.<br />새로운 기술들이 계속 업데이트 되고 있습니다.'
+            skill.value.desc = '웹 화면 구현을 위해 보유하고 있는 기술들을 둘러보세요.<br />새로운 기술들이 계속 업데이트 되고 있습니다.🤗'
         } else {
             skill.value.title = val.name
             skill.value.desc = val.description

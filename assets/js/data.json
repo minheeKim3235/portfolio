@@ -7,7 +7,7 @@
         },
         {
             "name": "Illustrator",
-            "description": "다양한 해상도에 대응 가능한 벡터이미지 사용을 위한 일러스트레이터 편집툴을 사용합니다.<br />svg 이미지 가공을 통한 컴포넌트 작업이 용이합니다.",
+            "description": "다양한 해상도에 대응 가능한 벡터이미지 사용을 위한 일러스트레이터 편집툴을 사용합니다.<br />svg 이미지 가공을 통해 아이콘 컴포넌트 작업이 용이합니다.",
             "icon": "ai"
         },
         {
@@ -17,27 +17,27 @@
         },
         {
             "name": "CSS3",
-            "description": "CSS3를 통해 <span>다양한 효과</span> 및 <span>에니메이션</span>, <span>화면 전환</span> 작업이 능숙하며 <span>고정형, 반응형</span> 모두에 대응 가능합니다.",
+            "description": "CSS3를 활용한 <span>인터렉션 효과</span> 및 <span>애니메이션</span>, <span>화면 전환</span> 작업이 능숙하며 <span>고정형, 반응형</span> 모두에 대응 가능합니다.",
             "icon": "css"
         },
         {
             "name": "SASS",
-            "description": "scss 전처리기를 사용하여 <span>css 관리의 최적화</span>를 지향합니다.",
+            "description": "scss 전처리기를 사용하여 <span>css 관리의 최적화</span>를 지향합니다.<br /><span>function, mixin</span>을 사용하여 유지보수 최적화를 위한 코드생성에 관심을 갖고 있습니다.",
             "icon": "sass"
         },
         {
             "name": "Javascript",
-            "description": "<span>ES6+</span> 문법을 사용한 플러그인 및 API 사용을 통한 동적 화면 구성이 가능합니다.<br />다양한 라이브러리와 <span>GSAP</span>를 통한 스크롤애니메이션을 구현합니다.",
+            "description": "<span>ES6+</span> 문법을 사용한 플러그인 및 API 사용을 통한 동적 화면 구현이 가능합니다.<br />다양한 라이브러리와 <span>GSAP</span>를 통한 스크롤 애니메이션을 만듭니다.",
             "icon": "js"
         },
         {
             "name": "Vue",
-            "description": "<span>vue2, vue3</span> 프로젝트에 참여하였습니다.<br /><span>vuetify</span>와 <span>prime vue</span> 라이브러리를 사용하거나 직접 컴포넌트를 생성합니다.",
+            "description": "<span>vue2, vue3</span> 프로젝트에 참여하였습니다.<br /><span>vuetify</span>와 <span>prime vue</span> 라이브러리를 사용하거나 직접 UI 컴포넌트를 만들어 작업합니다.",
             "icon": "vue"
         },
         {
             "name": "Github",
-            "description": "협업을 위해 깃허브를 통한 버전관리가 가능합니다.",
+            "description": "협업툴 <span>깃허브</span>를 통한 버전관리가 가능합니다.<br />깃랩의 <span>CI/CD 배포프로세스</span>를 경험하였습니다.",
             "icon": "github"
         }
     ],
