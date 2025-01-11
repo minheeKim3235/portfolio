@@ -294,41 +294,6 @@
         }
     } 
 }
-body:has(.class-tablet) {
-    .works_detail {
-        padding-top: 60px !important;
-        overflow: auto !important;
-        min-height: 100vh !important;
-        .pagination {
-            margin: 0 auto 60px !important;
-        }
-        .works_title,
-        .works_desc,
-        .works_tags {
-            max-width: 100% !important;
-            width: 100% !important;
-            text-align: center !important;
-        }
-        .works_title {
-            margin-bottom: 30px !important;
-            font-size: 3vmax !important;
-        }
-        .works_tags {
-            margin: 40px 0 0 0 !important;
-        }
-        figure {
-            overflow: hidden !important;
-            position: relative !important;
-            left: auto !important;
-            top: auto !important;
-            margin: 80px auto !important;
-            transform: translate(0, 0) !important;
-            &.tab {
-                transform: translateX(-5%) !important;
-            }
-        }
-    }
-}
 .class-desktop {
     nav {
         h1 a {
@@ -405,7 +370,8 @@ body:has(.class-tablet) {
     }
 }
 body:has(.class-mobile) {
-    .works_detail {
+    .detail_wrap {
+        padding: 7.4vh 9.8vw !important;
         display: flex !important;
         flex-flow: column nowrap !important;
         text-align: center !important;
@@ -424,6 +390,50 @@ body:has(.class-mobile) {
             left: initial !important;
             top: initial !important;
             transform: initial !important;
+            &.pc {
+                --frameW: 80vw;
+            }
+            &.tab {
+                --frameW: 80vw;
+            }
+            &.mobile {
+                --frameW: 45vw;
+            }
+        }
+    }
+}
+body:has(.class-tablet) {
+    .works_detail {
+        .detail_wrap {
+            padding: 10.4vh 9.8vw !important;
+        }
+        .pagination {
+            margin: 0 auto 60px !important;
+        }
+        .works_title,
+        .works_desc,
+        .works_tags {
+            max-width: 100% !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        .works_title {
+            margin-bottom: 30px !important;
+            font-size: 3vmax !important;
+        }
+        .works_tags {
+            margin: 40px 0 0 0 !important;
+        }
+        figure {
+            overflow: hidden !important;
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            margin: 80px auto !important;
+            transform: translate(0, 0) !important;
+            &.tab {
+                transform: translateX(-5%) !important;
+            }
         }
     }
 }
