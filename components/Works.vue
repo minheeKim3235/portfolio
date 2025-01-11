@@ -32,9 +32,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import data from '@/assets/js/data.json'
 
-// const getImageUrl = (name) => {
-//     return new URL(`../assets/images/works/${name}`, import.meta.url).href
-// }
+const works = ref(data.works);
 
 const randomColor = ref(['1d3045', '6682a3', 'dbe2ef', 'fff'])
 const makeRandomColor = ref([])
@@ -63,6 +61,21 @@ watch(detailIndex, (newVal) => {
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
+    const imgArr = [];
+    works.value.forEach(work => {
+        if (Array.isArray(work.image)) {
+            imgArr.push(work.image[1])
+        } else {
+            imgArr.push(work.image)
+        }
+    })
+
+    imgArr.forEach(image => {
+        const img = new Image();
+        img.src = image.src; // 이미지 URL
+    });
+
+    
     makeRandomColor.value = data.works.map(() => randomBg());
 
     let sections = gsap.utils.toArray(".work_lists li");
