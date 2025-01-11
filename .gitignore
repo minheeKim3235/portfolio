@@ -19,6 +19,6 @@ Gemfile.lock
 
 node_modules/
 .npm
-.nuxt
+.nuxt/
 dist
 package-lock.json
