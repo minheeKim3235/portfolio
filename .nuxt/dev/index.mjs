@@ -179,7 +179,7 @@ const _zeNnhWd2Bm = (function(nitro) {
 
 const rootDir = "/Users/minheekim/스터디/GitHub/portfolio";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1"};
 
 const appRootTag = "div";
 
