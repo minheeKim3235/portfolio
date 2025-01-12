@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     baseURL: '/portfolio/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets',
     head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ],
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       title: "웹 퍼블리셔 김민희",
