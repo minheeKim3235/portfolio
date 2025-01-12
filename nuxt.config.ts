@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Nuxt Shopping",
+      title: "웹 퍼블리셔 김민희",
       meta: [
         {
           hid: "웹 퍼블리셔 김민희 포트폴리오 사이트입니다.",
