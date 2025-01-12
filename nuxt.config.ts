@@ -18,7 +18,7 @@ export default defineNuxtConfig({
           hid: "웹 퍼블리셔 김민희 포트폴리오 사이트입니다.",
           name: "웹 퍼블리셔 김민희 포트폴리오 사이트입니다.",
           content:
-            "웹퍼블리셔 김민희 - 포트폴리오 사이트입니다.",
+            "웹퍼블리셔 김민희의 포트폴리오 사이트입니다.",
         },
         {
           name: "keywords",
@@ -32,19 +32,19 @@ export default defineNuxtConfig({
           name: "og:description",
           property: "og:description",
           content:
-            "웹퍼블리셔 김민희 - 포트폴리오 사이트입니다.",
+            "웹퍼블리셔 김민희의 포트폴리오 사이트입니다.",
         },
         {
           name: "og:image",
           property: "og:image",
           content: "https://minheekim3235.github.io/portfolio/images/og_thumb.png",
         },
-        { name: "twitter:card", content: "웹퍼블리셔 김민희 - 포트폴리오 사이트입니다." },
+        { name: "twitter:card", content: "웹퍼블리셔 김민희의 포트폴리오 사이트입니다." },
         { name: "twitter:title", content: "웹퍼블리셔 김민희" },
         {
           name: "twitter:description",
           content:
-            "웹퍼블리셔 김민희 - 포트폴리오 사이트입니다.",
+            "웹퍼블리셔 김민희의 포트폴리오 사이트입니다.",
         },
         { name: "twitter:image", content: "https://minheekim3235.github.io/portfolio/images/og_thumb.png" },
       ],
