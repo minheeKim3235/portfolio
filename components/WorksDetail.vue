@@ -13,6 +13,28 @@
                 </div>
                 <p class="works_title">{{ item.title }}</p>
                 <p class="works_desc" v-html="item.desc"></p>
+                <h4 class="works_tit">주요업무</h4>
+                <ul class="works_li">
+                    <li v-for="part in item.parts">{{ part }}</li>
+                </ul>
+                <h4 class="works_tit">업무성과</h4>
+                <ul class="works_li">
+                    <li v-for="result in item.results">{{ result }}</li>
+                </ul>
+                <!-- <h4 class="works_tit">참여인원</h4> -->
+                <h4 class="works_tit">기여도 {{ computedContribution }}%</h4>
+                <div class="works_members">
+                    <p v-if="item.members[0].planner !== 0"><font-awesome :icon="['fas', 'chart-diagram']" />기획 {{ item.members[0].planner }}</p>
+                    <p v-if="item.members[0].designer !== 0"><font-awesome :icon="['fas', 'palette']" />
+                        <strong v-if="item.position.includes(1)">디자인 {{ item.members[0].designer }}</strong>
+                        <template v-else>디자인 {{ item.members[0].designer }}</template>
+                    </p>
+                    <p v-if="item.members[0].publisher !== 0"><font-awesome :icon="['fas', 'laptop-code']" />
+                        <strong v-if="item.position.includes(2)">퍼블리싱 {{ item.members[0].publisher }}</strong>
+                        <template v-else>퍼블리싱 {{ item.members[0].publisher }}</template>
+                    </p>
+                    <p v-if="item.members[0].developer !== 0"><font-awesome :icon="['fas', 'code']" />개발 {{ item.members[0].developer }}</p>
+                </div>
                 <p class="works_tags">
                     <span v-for="tag in item.tags" :key="tag">{{ tag }}</span>
                 </p>
@@ -55,6 +77,19 @@ const emits = defineEmits(['closed']);
 const item = computed(() => {
     return data.works[currentIndex.value];
 });
+const computedContribution = computed(() => {
+    const members = Object.values(item.value.members[0]);
+    const position = Object.values(item.value.position);
+    const totalMembers = members.reduce((prev, cur) => {
+        return prev + cur;
+    }, 0);
+
+    let totalContribution = 0;
+    position.forEach((role) => {
+        totalContribution += members[role] / totalMembers *  1 / members[role];
+    })
+    return Math.ceil(totalContribution * 100);
+})
 
 //------- methods ---------//
 const changeIndex = (val) => {
@@ -136,10 +171,11 @@ onMounted(() => {
     height: 100vh;
     z-index: 99;
     background-color: #d9e4f2;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     
     .detail_wrap {
-        padding: 14.8vh 9.8vw 0;
+        padding: 14.8vh 9.8vw;
         width: 100%;
         min-height: 100%;
         height: auto;
@@ -253,6 +289,29 @@ onMounted(() => {
         word-break: keep-all;
     }
 
+    .works_tit {
+        margin: 20px 0 10px;
+    }
+    .works_li {
+        font-size: .85em;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 10px 0;
+        li {
+            &:before {
+                content: '- '
+            }
+        }
+    }
+    .works_members {
+        font-size: .85em;
+        display: flex;
+        gap: 20px;
+        svg {
+            width: 14px;
+            margin-right: 5px;
+        }
+    }
     .works_tags {
         max-width: 30vw;
         margin: 40px 0 0 -5px;
@@ -384,7 +443,7 @@ onMounted(() => {
     z-index: 100;
     cursor: none;
 }
-:deep(.works_desc strong) {
+:deep(strong) {
     font-weight: 500;
     position: relative;
     background: repeating-linear-gradient(transparent, transparent calc(1rem - 8px), #fcffc1 calc(1rem - 8px), #fcffc1 1rem);
