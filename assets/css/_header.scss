@@ -122,6 +122,9 @@ header {
          opacity: 0;
          transition: .3s all;
         }
+        &:focus-within {
+          text-decoration: underline;
+        }
         &.on {
           color:#88afdb;
           &:before {
