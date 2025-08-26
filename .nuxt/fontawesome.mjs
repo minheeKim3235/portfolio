@@ -5,7 +5,11 @@ import {
   faPaperPlane as freeFasFaPaperPlane,
   faCakeCandles as freeFasFaCakeCandles,
   faMobileScreenButton as freeFasFaMobileScreenButton,
-  faXmark as freeFasFaXmark
+  faXmark as freeFasFaXmark,
+  faChartDiagram as freeFasFaChartDiagram,
+  faPalette as freeFasFaPalette,
+  faLaptopCode as freeFasFaLaptopCode,
+  faCode as freeFasFaCode
 } from '@fortawesome/free-solid-svg-icons'
 
-export default {freeFasFaPen, freeFasFaUser, freeFasFaEnvelope, freeFasFaPaperPlane, freeFasFaCakeCandles, freeFasFaMobileScreenButton, freeFasFaXmark}
+export default {freeFasFaPen, freeFasFaUser, freeFasFaEnvelope, freeFasFaPaperPlane, freeFasFaCakeCandles, freeFasFaMobileScreenButton, freeFasFaXmark, freeFasFaChartDiagram, freeFasFaPalette, freeFasFaLaptopCode, freeFasFaCode}

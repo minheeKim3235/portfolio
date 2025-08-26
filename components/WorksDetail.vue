@@ -1,6 +1,6 @@
 <template>
     <Teleport to="body">
-        <div class="works_detail" v-if="isShow" ref="detailFrame"
+        <div class="works_detail" :class="currentClass" v-if="isShow" ref="detailFrame"
             @mousemove="handleMouseMove"
             @touchmove="handleTouchMove"
             @click="handleClick"
@@ -53,8 +53,11 @@
 
 <script setup>
 import { ref, reactive, watch } from 'vue'
+import { useBreakpoint } from '../composables/useBreakpoint';
+
 import data from '@/assets/js/data.json'
 
+const { currentBreakpoint, currentClass } = useBreakpoint()
 const gifData = ref(null)
 const props = defineProps({
     initialItemIndex: {
@@ -107,8 +110,10 @@ const closeDetail = () => {
 const handleMouseMove = (e) => {
     const target = e.target;
     if (!target.closest('.pagination, .prev, .next, .works_year')) {
+        const scrollTop = detailFrame.value?.scrollTop || 0;
+
         const mouseX = e.clientX;
-        const mouseY = e.clientY;
+        const mouseY = e.clientY + scrollTop;
         btnStyle.left = `${mouseX}px`;
         btnStyle.top = `${mouseY}px`;
         isBtnVisible.value = true;
@@ -283,7 +288,6 @@ onMounted(() => {
     }
 
     .works_desc {
-        max-width: 30vw;
         font-size: 1.0125rem;
         line-height: 1.5rem;
         word-break: keep-all;
@@ -298,6 +302,7 @@ onMounted(() => {
         flex-flow: column wrap;
         gap: 10px 0;
         li {
+            line-height: 1.2;
             &:before {
                 content: '- '
             }
@@ -313,7 +318,6 @@ onMounted(() => {
         }
     }
     .works_tags {
-        max-width: 30vw;
         margin: 40px 0 0 -5px;
 
         span {
@@ -332,7 +336,7 @@ onMounted(() => {
     }
 
     figure {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         transition: .5s left;
         width: var(--frameW);
