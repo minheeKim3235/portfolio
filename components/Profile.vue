@@ -6,7 +6,8 @@
         </figure>
         <p class="introduce">
             안녕하세요, <strong>{{ totalCarrior }}차</strong> 퍼블리셔 김민희입니다.<br />
-            만족스러운 사용자경험을 위한 완성도 높은 화면 구현을 위해 노력하고 있습니다.
+            만족스러운 사용자 경험, 완성도 높은 화면 구현을 위해 노력하고 있습니다.<br />
+            프론트엔드 개발을 위한 프레임워크, 라이브러리 등 다양한 최신 기술 습득에 힘쓰고 있습니다.
         </p>
         <div class="wrapper">
             <article>
@@ -31,7 +32,8 @@
             <article>
                 <h3>CAREER</h3>
                 <ul>
-                    <li><span class="year">2023 ~ 2024</span> 이투스 교육 <span class="role">퍼블리셔</span></li>
+                    <li><span class="year">2025 ~ </span> (주)천재교육 <span class="role">프리랜서</span></li>
+                    <li><span class="year">2023 ~ 2024</span> 이투스 교육 <span class="role">프리랜서</span></li>
                     <li><span class="year">2016 ~ 2023</span> 프리랜서 <span class="role">퍼블리셔</span></li>
                     <li><span class="year">2013 ~ 2016</span> 이안아이티 <span class="role">프리랜서</span></li>
                     <li><span class="year">2010 ~ 2013</span> (주)온라인파워스 <span class="role">웹프로젝트팀</span></li>
@@ -48,9 +50,10 @@ import { ref, computed } from 'vue'
 const totalCarrior = computed(() => {
     const fulltime = new Date() - new Date('2010-02-16');
     const restTime = new Date('2023-11-08') - new Date('2016-09-01');
+    const plusTime = new Date('2009-09-01') - new Date('2009-01-01');
     const calcMonth = 24 * 60 * 60 * 1000 * 30;
-    const resultY = parseInt((fulltime - restTime) / calcMonth / 12);
-    const resultM = parseInt(((fulltime - restTime) / calcMonth) % 12);
+    const resultY = parseInt((fulltime - restTime + plusTime) / calcMonth / 12);
+    const resultM = parseInt(((fulltime - restTime + plusTime) / calcMonth) % 12);
     return `${resultY}년 ${resultM}개월`
 })
 </script>

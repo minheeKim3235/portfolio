@@ -1,5 +1,9 @@
 <template>
     <section id="skills" class="bg-dark">
+        <!-- 배경 영상 -->
+        <object>
+            <video src="../assets/bg.mp4" autoplay loop playsinline="true" />
+        </object>
         <h2>SKILLS</h2>
         <ul @mouseleave="changeSkill('default')">
             <li v-for="item in data.skills" :key="item.name" @mouseover="changeSkill(item)" :class="`icon_${item.icon}`">
@@ -13,6 +17,7 @@
                 <p v-html="skill.desc"></p>
             </div>
         </div>
+
     </section>
 </template>
 
@@ -58,6 +63,21 @@ const changeSkill = (val) => {
     background: var(--secBg);
     min-height: 100vh;
     padding-top: 100px;
+    z-index: 0;
+    object {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        z-index: -1;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     h2 {
         color: var(--color-light);
     }

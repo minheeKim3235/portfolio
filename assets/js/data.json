@@ -32,7 +32,7 @@
         },
         {
             "name": "Vue",
-            "description": "<span>vue2, vue3</span> 프로젝트에 참여하였습니다.<br /><span>vuetify</span>와 <span>prime vue</span> 라이브러리를 사용하거나 직접 UI 컴포넌트를 만들어 작업합니다.",
+            "description": "<span>vue2, vue3</span> 프로젝트에 참여하였습니다.<br /><span>vuetify</span>와 <span>primevue</span> 라이브러리를 사용하거나 직접 UI 컴포넌트를 만들어 작업합니다.",
             "icon": "vue"
         },
         {
@@ -42,6 +42,39 @@
         }
     ],
     "works": [
+        {
+            "year": "2025",
+            "title": "천재교육 AIDT",
+            "desc": "AI Digital 교과서 LMS 프로젝트입니다.<br /><br />vue3로 프론트 화면을 구현하고 사용자 지정 테마로 개인화 영역을 구현하여 간단해진 소스 코드로 <strong>편리한 유지보수, 다수의 사용자를 만족시키는 컴포넌트 개발</strong>을 하였습니다.<br />Primevue 라이브러리로 UI를 구현하여 <strong>개발 시간을 단축</strong>하였습니다.",
+            "parts": [
+                "디지털 교과서 웹 프론트 화면(Vue 3) 구축",
+                "웹 표준 및 웹 접근성 준수 사이트 구축",
+                "Primevue 라이브러리로 컴포넌트 개발"],
+            "results": [
+                "반응형 마크업으로 태블릿 디바이스에서 최적화된 UX 제공",
+                "sprite SVG를 사용한 이미지 최적화",
+                "UI 라이브러리를 사용하여 코드 재사용성 증가",
+                "Mock Data를 활용한 UI 테스트 환경 구축으로 개발팀과 협업 효율성 향상",
+                "HTML validator 및 웹접근성 심사 통과",
+                "작업 자동화(SCSS 변수화, CSS 모듈화) 적용으로 유지보수성 강화"],
+            "members": [{
+                "planner": "10+",
+                "designer": "4+",
+                "publisher": 12,
+                "developer": "20+"
+            }],
+            "position": [2],
+            "image": "works_chunjae.png",
+            "type": "pc",
+            "tags": [
+                "vue",
+                "primevue",
+                "scss",
+                "ES6",
+                "Git",
+                "Figma"
+            ]
+        },
         {
             "year": "2024",
             "title": "이투스북 디온",
